@@ -7,6 +7,24 @@ A single-page web application for managing multiple savings goals, tracking prog
 
 Smart Goal Planner is a minimalist, interactive web app that allows users to create, manage, and track financial goals. Built with React and Vite, it uses a local json-server to simulate a REST API for full CRUD functionality. Users can add goals, make deposits, track progress with visual progress bars, and view an overview of their savings. The app demonstrates core React concepts, asynchronous API interaction with fetch, and responsive design.
 
+## Project structure
+smart-goal-planner/
+├── src/
+│   ├── components/
+│   │   ├── GoalList.jsx
+│   │   ├── GoalCard.jsx
+│   │   ├── AddGoalForm.jsx
+│   │   ├── DepositForm.jsx
+│   │   ├── Overview.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+├── public/
+│   ├── db.json (optional, for Vercel static hosting)
+├── package.json
+├── vite.config.js
+├── db.json (for local json-server)
+
 ## Features
 
 - *Home Page*: Displays a welcome message, overview, and navigation for managing goals.
