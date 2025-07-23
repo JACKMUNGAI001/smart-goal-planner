@@ -2,28 +2,14 @@
 
 A single-page web application for managing multiple savings goals, tracking progress, and making deposits using a local JSON-based API.
 
+#### By 
+
+Jackson
 
 ## Description
 
 Smart Goal Planner is a minimalist, interactive web app that allows users to create, manage, and track financial goals. Built with React and Vite, it uses a local json-server to simulate a REST API for full CRUD functionality. Users can add goals, make deposits, track progress with visual progress bars, and view an overview of their savings. The app demonstrates core React concepts, asynchronous API interaction with fetch, and responsive design.
 
-## Project structure
-smart-goal-planner/
-├── src/
-│   ├── components/
-│   │   ├── GoalList.jsx
-│   │   ├── GoalCard.jsx
-│   │   ├── AddGoalForm.jsx
-│   │   ├── DepositForm.jsx
-│   │   ├── Overview.jsx
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-├── public/
-│   ├── db.json (optional, for Vercel static hosting)
-├── package.json
-├── vite.config.js
-├── db.json (for local json-server)
 
 ## Features
 
@@ -35,42 +21,22 @@ smart-goal-planner/
 - *Deadline Alerts*: Highlights goals due within 30 days ("Due Soon") or overdue ("Overdue").
 - *Responsive Design*: Clean, user-friendly layout optimized for desktop and mobile.
 
-## How to Use
 
-### Requirements
+### View Live 
 
-- A computer, tablet, or phone
-- Access to the internet
-- A modern web browser
-- Node.js installed (for local development)
+Deployed link; https://smart-goal-planner-beige.vercel.app/
+Backend live link; https://smart-goatl-planner-8.onrender.com/goals
 
-### View Live Site
+## Technologies 
 
-Note: As this project uses a local json-server, there is no live site hosted. Follow the local development instructions below to run the app.
+Frontend; React.js
+Backend; json-server
 
-The app allows you to:
+## Related repositories 
 
-- Create and delete financial goals
-- Make deposits to existing goals
-- Track progress with visual bars and deadline alerts
-- View a summary of all savings activity
+Repository link; https://github.com/JACKMUNGAI001/smart-goal-planner.git
+Deployed API; https://smart-goatl-planner-8.onrender.com/goals
 
-### Local Development
-
-To run the project locally, you'll need:
-
-- Code editor (VS Code recommended)
-- Terminal/Command Line
-- Node.js and npm installed
-
-## Notes
-
-- The app expects the backend to be running at http://localhost:3000.
-- All data is stored in db.json and managed by json-server.
-
-## AUTHOR
-
-Jackson
 
 ## Contact Details
 
