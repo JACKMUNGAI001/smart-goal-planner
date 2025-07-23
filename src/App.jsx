@@ -17,7 +17,7 @@ function App() {
 
   // Fetch goals on load
   useEffect(() => {
-    fetch('http://localhost:3000/goals')
+    fetch('https://smart-goal-planner-8.onrender.com/goals')
       .then(response => response.json())
       .then(data => setGoals(data))
       .catch(error => console.error('Error fetching goals:', error));
@@ -32,7 +32,7 @@ function App() {
       savedAmount: 0,
       createdAt: new Date().toISOString().split('T')[0],
     };
-    fetch('http://localhost:3000/goals', {
+    fetch('https://smart-goal-planner-8.onrender.com/goals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(goal),
@@ -47,7 +47,7 @@ function App() {
 
   // Delete goal
   const handleDeleteGoal = (id) => {
-    fetch(`http://localhost:3000/goals/${id}`, {
+    fetch(`https://smart-goal-planner-8.onrender.com/goals/${id}`, {
       method: 'DELETE',
     })
       .then(() => {
@@ -63,7 +63,7 @@ function App() {
     const goal = goals.find(g => g.id === goalId);
     if (!goal) return;
     const updatedSavedAmount = goal.savedAmount + parseFloat(amount);
-    fetch(`http://localhost:3000/goals/${goalId}`, {
+    fetch(`https://smart-goal-planner-8.onrender.com/goals/${goalId}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ savedAmount: updatedSavedAmount }),
