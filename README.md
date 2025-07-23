@@ -35,7 +35,7 @@ Backend; json-server
 ## Related repositories 
 
 Repository link; https://github.com/JACKMUNGAI001/smart-goal-planner.git
-Deployed API; https://smart-goatl-planner-8.onrender.com/goals
+Deployed API; https://smart-goal-planner-8.onrender.com/goals
 
 
 ## Contact Details
