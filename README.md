@@ -25,7 +25,7 @@ Smart Goal Planner is a minimalist, interactive web app that allows users to cre
 ### View Live 
 
 Deployed link; https://smart-goal-planner-beige.vercel.app/
-Backend live link; https://smart-goatl-planner-8.onrender.com/goals
+Backend live link; https://smart-goal-planner-8.onrender.com/goals
 
 ## Technologies 
 
