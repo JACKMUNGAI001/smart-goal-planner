@@ -1,3 +1,4 @@
+
 # Smart Goal Planner
 
 A single-page web application for managing multiple savings goals, tracking progress, and making deposits using a local JSON-based API.
@@ -13,13 +14,70 @@ Smart Goal Planner is a minimalist, interactive web app that allows users to cre
 
 ## Features
 
-- *Home Page*: Displays a welcome message, overview, and navigation for managing goals.
-- *Goal Management*: Create, read, update, and delete financial goals (e.g., "Travel Fund," "Emergency Fund") using a local JSON-based API.
-- *Progress Tracking*: Visual progress bars, saved amount, target amount, and remaining amount for each goal.
-- *Deposits*: Add deposits to specific goals, updating their progress in real-time.
-- *Overview*: Shows total goals, total saved amount, and number of completed goals.
-- *Deadline Alerts*: Highlights goals due within 30 days ("Due Soon") or overdue ("Overdue").
-- *Responsive Design*: Clean, user-friendly layout optimized for desktop and mobile.
+- Home Page: Displays name of the web app, overview, and navigation for managing goals.
+- Goal Management: Create, read, update, and delete financial goals (e.g., "Travel Fund," "Emergency Fund") using a local JSON-based API.
+- Progress Tracking: Visual progress bars, saved amount, target amount, and remaining amount for each goal.
+- Deposits: Add deposits to specific goals, updating their progress in real-time.
+- Overview: Shows total goals, total saved amount, and number of completed goals.
+- Deadline Alerts: Highlights goals due within 30 days ("Due Soon") or overdue ("Overdue").
+
+## Setup Instructions (Local Development)
+Follow these steps to run the project locally:
+
+1. Clone the Repository
+git clone https://github.com/JACKMUNGAI001/smart-goal-planner.git
+cd smart-goal-planner
+
+2. Install Dependencies
+npm install
+
+3. Start JSON Server (Local API)
+You'll use json-server to simulate the backend using db.json.
+npm install -g json-server (if not already installed).
+Start the mock backend json-server --watch db.json --port 3000
+This will start your backend at:
+http://localhost:3000/goals
+
+4. Start the React App
+In a new terminal tab:
+npm run dev
+This will start the frontend at:
+http://localhost:5173
+
+## API Overview (db.json)
+Each goal has the following structure:
+
+json
+{
+  "id": "1",
+  "name": "Travel Fund - Japan",
+  "targetAmount": 5000,
+  "savedAmount": 3200,
+  "category": "Travel",
+  "deadline": "2025-12-31",
+  "createdAt": "2024-01-15"
+}
+
+### API Endpoints
+
+GET /goals – fetch all goals
+
+POST /goals – create a new goal
+
+PATCH /goals/:id – update goal fields (e.g., deposit)
+
+PUT /goals/:id – full update
+
+DELETE /goals/:id – delete a goal
+
+## Folder Structure
+
+src/
+components/         #UI components; GoalCard, GoalList, DepositForm, Overview and AddGoalForm
+App.css             # Styling
+App.jsx             # Main component
+main.jsx            # Entry point
+db.json             # Mock database used by json-server
 
 
 ### View Live 
@@ -29,8 +87,10 @@ Backend live link; https://smart-goal-planner-8.onrender.com/goals
 
 ## Technologies 
 
-Frontend; React.js
-Backend; json-server
+Frontend: React.js
+Mock Backend: json-server
+Styling: CSS
+Hosting: Vercel (frontend), Render (backend)
 
 ## Related repositories 
 
